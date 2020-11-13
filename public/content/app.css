@@ -1,0 +1,180 @@
+/* color codes
+#45CB85
+ #9EE493
+ #DAF7DC
+#ABC8C0
+#70566D
+#42273B 
+*/
+
+
+
+/** common styles */
+.btn .fa, .btn .fas {
+  padding-right: 4px;
+}
+/* form styles  */
+.form-group label {
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.form-buttons {
+  padding-top: 10px;
+  margin-top: 15px;
+}
+
+.form-buttons .btn {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+.container strong {
+  font-weight: bold;
+}
+
+/* Header styles */
+header {
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+.logo {
+  text-align: center;
+  font-family: 'Racing Sans One', cursive;
+  font-size: 2.3em;
+  line-height: 35px;
+  color: #42273B;
+}
+.logo span {
+  color: #70566D;
+}
+.logo::before {
+  content: '';
+  background: url('../assets/images/icon.png') no-repeat left center /contain;
+  display: block;
+  float: left;
+  height: 35px;
+  width: 75px;
+}
+
+
+/* social media icon */
+.social-media ul {
+  padding-left: 0;
+  text-align: center;
+  padding-top: 20px;
+}
+.social-media ul li a i {
+  font-size: 22px;
+}
+.social-media ul li {
+  display: inline-block;
+  padding: 8px;
+}
+.social-media ul li a {
+  color: #8d99ae;
+}
+
+.social-media ul li a:hover {
+  color: #45CB85;
+}
+
+/* main navigation styles  */
+.main-navigation {
+  margin-top: 35px;
+  border-bottom: 5px solid #70566D;
+}
+.main-navigation ul li {
+  text-transform: uppercase;
+  padding: 0 15px;
+}
+.main-navigation .navbar-nav .nav-link {
+  color: #1b343f;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.main-navigation .navbar-nav .nav-link.active,
+.main-navigation .navbar-nav .login .nav-link.active .fas {
+  color: #45CB85;
+}
+
+/* login icon color */
+.main-navigation .navbar-nav .login
+{
+  font-weight: bold;
+}
+.main-navigation .navbar-nav .login .fas
+{
+  color: #0069d9;
+}
+
+/* content styles */
+.jumbotron {
+  background-color: transparent;
+}
+
+.jumbotron h1 {
+  color: #42273B;
+  font-weight: 600;
+}
+.jumbotron h5 {
+  color: #ef6f6c;
+  font-weight: 700;
+}
+.jumbotron .sub-heading {
+  color: #70566D;
+  font-size: 22px;
+  font-weight: 600;
+}
+/* home page styles */
+.home-hero {
+  background: url('../assets/images/hero-pattern.png') repeat #9EE493;
+  color: #ABC8C0
+}
+.home-hero h1 {
+  color: #DAF7DC
+}
+/* survey page styles */
+.survey .jumbotron .sub-heading {
+  color: #5b6c5d;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.survey .jumbotron .sub-heading .name {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.survey .jumbotron .sub-heading i {
+  color: #45CB85;
+  margin-right: 10px;
+}
+
+/* footer styles */
+footer {
+  padding: 20px 0;
+  margin-top: 25px;
+  color: #e8e9ed;
+  font-size: 14px;
+}
+
+
+/* survey list page */
+.survey-lists .survey-list-item a {
+  text-decoration: none;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.manage-survey {
+  padding: 0 20px;
+}
+
+
+/* footer block */
+.footer-block {
+  color: #42273B;
+  font-size: 14px;
+  font-weight: 500;
+}
