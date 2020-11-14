@@ -3,7 +3,7 @@
 <main class="container">
   <div class="jumbotron">
     <h1 class="display-4"><%= title %></h1>
-    <p class="lead">Edit the business survey!</p>
+    <p class="lead">Edit the survey!</p>
 
     <br class="my-4">
 
@@ -11,31 +11,31 @@
       <form class="col-sm-8" action="" method="post">
         <fieldset class="form-group">
           <label for="inputFirstName">Name</label>
-          <input type="text" class="form-control" id="inputFirstName" placeholder="Enter Survey Name" name="name"
+          <input type="text" class="form-control" id="inputFirstName" placeholder="Edit Survey Name" name="name"
             value="<%= survey.name %>" required>
         </fieldset>
         <fieldset class="form-group">
-          <label for="inputAddress">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="Enter your address" name="address"
-            value="<%= survey.address %>" required>
+          <label for="inputAddress">Type</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Edit survey type" name="type"
+            value="<%= survey.type %>" required>
         </fieldset>
         <fieldset class="form-group">
-          <label for="inputAge">Age</label>
-          <input type="number" class="form-control" id="inputAge" placeholder="Enter Your Age" name="age"
-            value="<%= survey.age %>" required>
+          <label for="inputAge">ID</label>
+          <input type="number" class="form-control" id="inputAge" placeholder="Enter survey ID" name="id"
+            value="<%= survey.id %>" required>
         </fieldset>
         <fieldset class="form-group">
-          <label for="inputHeight">Height</label>
-          <input type="text" class="form-control" id="inputHeight" placeholder="Enter Your Height" name="height"
-            value="<%= survey.height %>" required>
+          <label for="inputHeight">Release date</label>
+          <input type="date" class="form-control" id="inputHeight" placeholder="Enter survey release date" name="releaseDate"
+            value="<%= survey.releaseDate %>" required>
         </fieldset>
         <fieldset class="form-group">
-          <label for="inputWeight">Weight</label>
-          <input type="text" class="form-control" id="inputWeight" placeholder="Enter Your Weight" name="weight"
-            value="<%= survey.weight %>" required>
+          <label for="inputWeight">Expiry date</label>
+          <input type="date" class="form-control" id="inputWeight" placeholder="Edit expiry date" name="expiryDate"
+            value="<%= survey.expiryDate %>" required>
         </fieldset>
         <fieldset class="form-buttons">
-          <button class="btn btn-primary" type="submit"> <i class="fas fa-edit "></i> Update Contact</button>
+          <button class="btn btn-primary" type="submit"> <i class="fas fa-edit "></i> Update Survey</button>
           <a href="/survey-list" class="btn btn-warning"> <i class="fas fa-undo" role="button"></i> Cancel</a>
         </fieldset>
       </form>

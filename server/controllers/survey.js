@@ -12,7 +12,7 @@ module.exports.displaySurveyItems = (req, res, next) => {
       return console.log(err);
     } else {
       res.render('survey/list', {
-        title: 'Student Surveys',
+        title: 'Available surveys',
         slug: 'surveys',
         surveyList: surveys,
       });
@@ -27,7 +27,7 @@ module.exports.displaySurveyItems = (req, res, next) => {
 // GET - display add survey page
 module.exports.displayAddSurveyItem = (req, res, next) => {
   res.render('survey/add', { 
-    title: 'Student Survey', 
+    title: 'Create Survey', 
     slug: 'surveys',    
   });
 }
@@ -36,10 +36,10 @@ module.exports.displayAddSurveyItem = (req, res, next) => {
 module.exports.addSurveyItem = (req, res, next) => {
   let = newSurvey = Survey({
     name: req.body.name,
-    address: req.body.address,
-    age: req.body.age,
-    height: req.body.height,
-    weight: req.body.weight,
+    type: req.body.type,
+    id: req.body.id,
+    releaseDate: req.body.releaseDate,
+    expiryDate: req.body.expiryDate,
   });
 
   Survey.create(newSurvey, (err, Survey) => {
@@ -81,10 +81,10 @@ module.exports.updateSurveyItem = (req, res, next) => {
   let updateSurvey = Survey({
     _id: id,
     name: req.body.name,
-    address: req.body.address,
-    age: req.body.age,
-    height: req.body.height,
-    weight: req.body.weight,
+    type: req.body.type,
+    id: req.body.id,
+    releaseDate: req.body.releaseDate,
+    expiryDate: req.body.expiryDate,
   });
 
   Survey.updateOne({ _id: id }, updateSurvey, (err) => {

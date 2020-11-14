@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./server.js"
+    "nodemon": "nodemon server.js"
   },
   "engines": {
     "node": "^12.19.0",
@@ -26,7 +26,8 @@
   "devDependencies": {
     "@types/connect-flash": "0.0.35",
     "@types/express": "^4.17.9",
-    "@types/mongoose": "^5.10.0"
+    "@types/mongoose": "^5.10.0",
+    "nodemon": "^2.0.6"
   },
   "description": "Express Js survey Website",
   "main": "server.js",

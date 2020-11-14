@@ -4,10 +4,10 @@ let mongoose = require('mongoose');
 
 let surveyModel = mongoose.Schema({
   name: String,
-	address: String,
-	age: String,
-	height: String,
-	weight: String
+	type: String,
+	id: String,
+	releaseDate: String,
+	expiryDate: String
 },
 {
   collection: "surveys"
