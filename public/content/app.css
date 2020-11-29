@@ -178,3 +178,31 @@ footer {
   font-size: 14px;
   font-weight: 500;
 }
+
+/* survey form */
+.survey-creation  label{
+  font-weight: 500;
+  font-size: 1.2em;
+}
+.survey-creation h4{
+  color: #42273B;
+  font-size: 1.5em;
+  font-weight: 600;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #977C90;
+  margin-bottom: 20px;
+}
+.survey-creation  .questions .question {
+  margin-top: 20px;
+}
+.survey-creation  .questions .choices {
+  padding-left: 30px;
+}
+.survey-creation  .questions .choices label{
+  font-size: 1em;
+}
+.survey-creation  .questions .choices input{
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+}

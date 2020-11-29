@@ -5,10 +5,11 @@
     <h1 class="display-4"><%= title %></h1>
     <p class="lead">Add your details for survey!</p>
 
-    <br class="my-4">
+    <br class="my-2">
 
-    <div class="survey-creation row">
+    <div class="survey-creation row">      
       <form class="col-sm-8" action="" method="post">
+        <h4>Survey Information</h4>
         <fieldset class="form-group">
           <label for="inputFirstName">Survey Name</label>
           <input type="text" class="form-control" id="inputFirstName" placeholder="Enter Survey Name" name="name"
@@ -17,11 +18,6 @@
         <fieldset class="form-group">
           <label for="inputAddress">Survey Type</label>
           <input type="text" class="form-control" id="inputAddress" placeholder="Enter survey type" name="type"
-            value="" required>
-        </fieldset>
-        <fieldset class="form-group">
-          <label for="inputAge">Survey ID</label>
-          <input type="number" class="form-control" id="inputAge" placeholder="Enter survey ID" name="id"
             value="" required>
         </fieldset>
         <fieldset class="form-group">
@@ -34,6 +30,30 @@
           <input type="date" class="form-control" id="inputWeight" placeholder="Enter expiry date" name="expiryDate"
             value="" required>
         </fieldset>
+        <div class="questions">
+          <h4>Survey Questions</h4>
+          <div class="question">
+            <fieldset class="form-group">
+              <label for="inputQuestion">Question 1</label>
+              <input type="text" class="form-control" id="inputQuestion" placeholder="Enter survey question 1" name="q1"
+                value="" required>
+            </fieldset>
+            <fieldset class="form-group choices">
+              <label for="inputChoice1">Choice 1</label>
+              <input type="text" class="form-control" id="inputChoice1" placeholder="Enter choice 1" name="q1c1"
+                value="" required>
+              <label for="inputChoice2">Choice 2</label>
+              <input type="text" class="form-control" id="inputChoice2" placeholder="Enter choice 2" name="q1c2"
+                value="">
+              <label for="inputChoice3">Choice 3</label>
+              <input type="text" class="form-control" id="inputChoice3" placeholder="Enter choice 3" name="q1c3"
+                value="">
+              <label for="inputChoice4">Choice 4</label>
+              <input type="text" class="form-control" id="inputChoice4" placeholder="Enter choice 4" name="q1c4"
+                value="">
+            </fieldset>
+          </div> 
+        </div>        
         <fieldset class="form-buttons">
           <button class="btn btn-primary" type="submit"> <i class="fas fa-plus-circle "></i> Submit</button>
           <a href="/survey-list" class="btn btn-warning"> <i class="fas fa-undo" role="button"></i> Cancel</a>
