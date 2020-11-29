@@ -10,29 +10,34 @@
     <div class="survey-creation row">
       <form class="col-sm-8" action="" method="post">
         <fieldset class="form-group">
-          <label for="inputFirstName">Name</label>
-          <input type="text" class="form-control" id="inputFirstName" placeholder="Edit Survey Name" name="name"
+          <label for="inputName">Name</label>
+          <input type="text" class="form-control" id="inputName" placeholder="Edit Survey Name" name="name"
             value="<%= survey.name %>" required>
         </fieldset>
         <fieldset class="form-group">
-          <label for="inputAddress">Type</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="Edit survey type" name="type"
+          <label for="inputType">Type</label>
+          <input type="text" class="form-control" id="inputType" placeholder="Edit survey type" name="type"
             value="<%= survey.type %>" required>
         </fieldset>
         <fieldset class="form-group">
-          <label for="inputAge">ID</label>
-          <input type="number" class="form-control" id="inputAge" placeholder="Enter survey ID" name="id"
-            value="<%= survey.id %>" required>
-        </fieldset>
-        <fieldset class="form-group">
-          <label for="inputHeight">Release date</label>
-          <input type="date" class="form-control" id="inputHeight" placeholder="Enter survey release date" name="releaseDate"
+          <label for="inputReleaseDate">Release date</label>
+          <input type="date" class="form-control" id="inputReleaseDate" placeholder="Enter survey release date" name="releaseDate"
             value="<%= survey.releaseDate %>" required>
         </fieldset>
         <fieldset class="form-group">
-          <label for="inputWeight">Expiry date</label>
-          <input type="date" class="form-control" id="inputWeight" placeholder="Edit expiry date" name="expiryDate"
+          <label for="inputExpiryDate">Expiry date</label>
+          <input type="date" class="form-control" id="inputExpiryDate" placeholder="Edit expiry date" name="expiryDate"
             value="<%= survey.expiryDate %>" required>
+        </fieldset>
+        <fieldset class="form-group">
+          <label for="inpuId">Question 1</label>
+          <input type="text" class="form-control" id="inputQuestion1" placeholder="Enter question 1" name="question1"
+            value="<%= survey.question1 %>" required>
+        </fieldset>
+        <fieldset class="form-group">
+          <label for="inpuId">Question 2</label>
+          <input type="text" class="form-control" id="inputQuestion2" placeholder="Enter question 2" name="question2"
+            value="<%= survey.question2 %>" required>
         </fieldset>
         <fieldset class="form-buttons">
           <button class="btn btn-primary" type="submit"> <i class="fas fa-edit "></i> Update Survey</button>

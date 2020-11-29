@@ -13,23 +13,25 @@
       <table class="table table-hover table-responsive-md">
         <thead class="thead-light">
           <tr class="d-flex">
-            <th class="col-3">Survey Name</th>
-            <th class="col-3">Survey Type</th>
-            <th class="col-1">Survey ID</th>
-            <th class="col-1">Release date</th>
-            <th class="col-1">Expiry Date</th>
-            <th class="col-3"></th>
+            <th class="col-2">Survey Name</th>
+            <th class="col-2">Survey Type</th>
+            <th class="col-2">Release date</th>
+            <th class="col-2">Expiry Date</th>
+            <th class="col-2">Question 1</th>
+            <th class="col-2">Question 2</th>
+            <th class="col-1"></th>
           </tr>
         </thead>
         <tbody>
           <% for (let count = 0; count < surveyList.length; count++) { %>
             <tr class="d-flex survey-list-item">
-              <td class="col-3"><%= surveyList[count].name %></td>
-              <td class="col-3"><%= surveyList[count].type %></td>
-              <td class="col-1"><%= surveyList[count].id %></td>
-              <td class="col-1"><%= surveyList[count].releaseDate %></td>
-              <td class="col-1"><%= surveyList[count].expiryDate %></td>
-              <td class="text-right col-3">
+              <td class="col-2"><%= surveyList[count].name %></td>
+              <td class="col-2"><%= surveyList[count].type %></td>
+              <td class="col-2"><%= surveyList[count].releaseDate %></td>
+              <td class="col-2"><%= surveyList[count].expiryDate %></td>
+              <td class="col-2"><%= surveyList[count].question1 %></td>
+              <td class="col-2"><%= surveyList[count].question2 %></td>
+              <td class="text-right col-1">
                 <a href="/survey-list/edit/<%= surveyList[count]._id %>" class="btn btn-primary btn-sm" role="button"><i class="fa fa-pencil-alt"></i> Edit</a>
 
                 <a data-toggle="modal" data-id="<%= surveyList[count]._id %>" data-target="#confModel" href="#" class="btn btn-danger btn-sm" role="button"><i class="fa fa-trash-alt"></i> Delete</a>

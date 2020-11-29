@@ -37,9 +37,10 @@ module.exports.addSurveyItem = (req, res, next) => {
   let = newSurvey = Survey({
     name: req.body.name,
     type: req.body.type,
-    id: req.body.id,
     releaseDate: req.body.releaseDate,
     expiryDate: req.body.expiryDate,
+    question1: req.body.question1,
+    question2: req.body.question2
   });
 
   Survey.create(newSurvey, (err, Survey) => {
@@ -82,9 +83,10 @@ module.exports.updateSurveyItem = (req, res, next) => {
     _id: id,
     name: req.body.name,
     type: req.body.type,
-    id: req.body.id,
     releaseDate: req.body.releaseDate,
     expiryDate: req.body.expiryDate,
+    question1: req.body.question1,
+    question2: req.body.question2
   });
 
   Survey.updateOne({ _id: id }, updateSurvey, (err) => {
