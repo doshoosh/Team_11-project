@@ -7,7 +7,13 @@ let logger = require('morgan');
 
 let app = express();
 
+// modules for authentication
+let session = require('express-session');
+let passport = require('passport');
 let flash = require('connect-flash');
+
+let passportLocal = require('passport-local');
+let localStrategy = passportLocal.Strategy;
 
 // database setup
 let mongoose = require('mongoose');
@@ -27,8 +33,36 @@ let indexRouter = require('../routes/index');
 let surveysRouter = require('../routes/survey');
 
 
+//setup express session
+app.use(
+  session({
+    secret: 'ffgfq3XwjaFasuwpymcdRqu9k3g',
+    saveUninitialized: false,
+    resave: false,
+  })
+);
+
 // initialize flash
 app.use(flash());
+
+// initialize passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+/* * 
+** passport user configuration 
+* */ 
+
+// create a User Model Instance
+let userModel = require('../models/user');
+let User = userModel.User;
+
+// User Authentication Strategy
+passport.use(User.createStrategy());
+
+// serialize and deserialize the User info
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 
 // view engine setup

@@ -14,6 +14,7 @@ module.exports.displaySurveyItems = (req, res, next) => {
       res.render('survey/list', {
         title: 'Available surveys',
         slug: 'surveys',
+        displayName: req.user ? req.user.displayName : '',
         surveyList: surveys,
       });
     }
@@ -29,6 +30,7 @@ module.exports.displayAddSurveyItem = (req, res, next) => {
   res.render('survey/add', { 
     title: 'Create Survey', 
     slug: 'surveys',    
+    displayName: req.user ? req.user.displayName : '',
   });
 }
 
@@ -78,6 +80,7 @@ module.exports.displayEditSurveyPage = (req, res, next) => {
       res.render('survey/edit', {
         title: 'Edit Survey',
         slug: 'surveys',
+        displayName: req.user ? req.user.displayName : '',
         survey: selectedSurvey,
       });
     }

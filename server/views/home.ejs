@@ -6,8 +6,10 @@
     <h1 class="display-4"><%= title %></h1>
     <p class="lead sub-heading">Free survey creator</p>
     <div class="row">
-      <div class="col-sm-12">       
-        <p>Welcome to Team 11 <p>
+      <div class="col-sm-12">
+        <p class="lead"> 
+          <% if(typeof displayName == 'string' && displayName) { %>  Hello <strong> <%= displayName %>.</strong> <% } %>
+          Welcome, to <strong> Team 11 </strong> </p>
         <p>This website helps you to create your own survey and participate on other surveys.You are just a few clicks away from creating your own survey. Let's start!</p>
 
   

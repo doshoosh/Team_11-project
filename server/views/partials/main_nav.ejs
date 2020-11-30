@@ -11,6 +11,15 @@
       <li class="nav-item">
         <a class="nav-link <%= slug === 'surveys' && 'active' %>" href="/survey-list">Survey Lists</a>
       </li>
+      <% if(typeof displayName == 'string' && displayName) { %>        
+        <li class="nav-item login">
+          <a class="nav-link <%= slug === 'login' && 'active' %>" href="/logout"> <i class="fas fa-sign-out-alt"></i> Logout</a>
+        </li>
+      <% } else { %>
+        <li class="nav-item login">
+          <a class="nav-link <%= slug === 'login' && 'active' %>" href="/login"> <i class="fas fa-sign-in-alt"></i> Login</a>
+        </li>
+      <% } %>
     </ul>
   </div>
 </nav>
