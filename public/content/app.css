@@ -206,3 +206,25 @@ footer {
   font-size: 0.9em;
   margin-bottom: 0.5em;
 }
+.question {
+  padding: 20px 10px;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.choice input {
+  display: block;
+  float: left;
+}
+.choice button {
+  display: block;
+  float: right;
+  margin-top: -41px;
+}
+
+#remove-question {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}

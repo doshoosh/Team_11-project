@@ -36,6 +36,7 @@ module.exports.displayAddSurveyItem = (req, res, next) => {
 
 // POST - process add survey page
 module.exports.addSurveyItem = (req, res, next) => {
+  console.log(req);
   let = newSurvey = Survey({
     name: req.body.name,
     type: req.body.type,

@@ -5,13 +5,11 @@ let mongoose = require('mongoose');
 // survey questions 
 let surveyQuestions = mongoose.Schema({
   question: {type:String},
-	choices:
+	choices: [
 		{
-			c1: {type:String},
-			c2: {type:String},
-			c3: {type:String},
-			c4: {type:String},
+			choice: {type:String},
 		}	
+	]
 });
 
 //  survey structure
@@ -20,10 +18,10 @@ let surveyModel = mongoose.Schema({
 	type: String,
 	releaseDate: String,
 	expiryDate: String,
-	question: surveyQuestions,	
+	question: [surveyQuestions],	
 },
 {
-  collection: "surveys"
+  collection: "surveys_d"
 });
 
 module.exports = mongoose.model('Survey', surveyModel);
